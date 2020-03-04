@@ -1,0 +1,206 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu&display=swap');
+
+* {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  font-family: "Open Sans", "Roboto", "Arial", sans-serif;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+:root {
+  --theme: #ff9500;
+  --main-height: 50vh;
+}
+
+.top {
+  font-family: "Ubuntu", "Roboto", "Arial", sans-serif;
+  background-color: var(--theme);
+  padding: 1vh 2vw;
+  width: 96vw;
+  min-height: var(--main-height);
+  font-size: 2em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.about-top {
+  min-height: calc(var(--main-height) / 2);
+}
+
+.top h1 {
+  margin: 0.1em 0 0 0;
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.top h2 {
+  margin: 0 0 0 0.2em;
+  font-size: 0.7em;
+  margin-bottom: 2em;
+}
+
+.nav {
+  font-family: "Open Sans", "Roboto", "Arial", sans-serif;
+  position: absolute;
+  bottom: 40px;
+}
+
+.btn {
+  display: inline;
+  text-align: center;
+  border: 3px solid black;
+  padding: 15px;
+  color: black;
+  background-color: var(--theme);
+  transition: .3s;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover>.btn {
+  background-color: black;
+  color: var(--theme)
+}
+
+.mypic {
+  position: relative;
+  float: right;
+  margin-right: 5vw;
+}
+
+/*Note: once min() and max() can be used, the commented versions can be
+used instead of the query at the bottom*/
+.mypic img {
+  height: calc(var(--main-height) - 2vh);
+  /*height: min(calc(var(--main-height) - 2vh), 30vw);*/
+  width: calc(var(--main-height) - 2vh);
+  /*width: min(calc(var(--main-height) - 2vh), 30vw);*/
+  border-radius: 24vh;
+  box-shadow: 0 0 10px;
+  object-fit: cover;
+}
+
+.bottom {
+  width: 100vw;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.stalk-text {
+  font-weight: 100;
+}
+
+.stalk-list {
+  list-style-type: none;
+  text-align: center;
+}
+
+.stalk-list li {
+  display: inline;
+  font-size: 2em;
+  margin-right: 20px;
+}
+
+.stalk-list i {
+  color: black;
+  transition: .3s;
+}
+
+.stalk-list i:hover {
+  color: var(--theme);
+}
+
+.description {
+  font-weight: 100;
+  width: 60vw;
+  text-align: justify;
+  margin: auto;
+}
+
+.skills {
+   display: flex;
+   flex-wrap: wrap;
+   margin: auto;
+   width: 50%;
+}
+
+.skills div {
+   text-align: center;
+   padding: 0;
+   margin: auto;
+   margin-bottom: 20px;
+   width: 30%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.skills i {
+   margin-right: 5px;
+}
+
+.achievements {
+  width: 60vw;
+  margin: auto;
+}
+
+.achievements p {
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+.event {
+  margin-top: 0;
+  padding: 0;
+}
+
+.event p {
+  margin: 0;
+}
+
+.used-skills {
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.used-skills i {
+  margin-right: 3px;
+}
+
+.used-skills :not(:last-child)::after {
+  content: " • ";
+}
+
+.event:not(:last-child)::after {
+  content: "";
+  background-color: #303030;
+  width: 2px;
+  height: 70px;
+  margin: auto;
+  display: block;
+}
+
+/*Note: once min() and max() can be used, the commented lines in the original block
+can be used instead of this query */
+@media screen and (max-width: 1010px) {
+  .mypic img {
+    height: 30vw;
+    width: 30vw;
+  }
+}
+
+/*The following can be used to detect JS enabling once the scripting query is supported
+@media (scripting: none) or (scripting: initial-only) {
+  do something
+}
+*/

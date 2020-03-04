@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Grand Prize Winner in the 2019 Google Code-In contest with Apertium",
+    "skills": [
+      {
+        "text": "JavaScript",
+        "type": "devicon",
+        "devName": "javascript-plain"
+      },
+      {
+        "text": "Python",
+        "type": "devicon",
+        "devName": "python-plain"
+      },
+      {
+        "text": "RWD",
+        "type": "fa",
+        "faName": "mobile-alt",
+        "faType": "fas",
+        "class": "rwd"
+      },
+      {
+        "text": "jQuery",
+        "type": "devicon",
+        "devName": "jquery-plain"
+      },
+      {
+        "text": "d3.js",
+        "type": "devicon",
+        "devName": "d3js-plain"
+      }
+    ]
+  },
+  {
+    "name": "Finalist in the 2018 Google Code-In contest with Apertium",
+    "skills": [
+      {
+        "text": "JavaScript",
+        "type": "devicon",
+        "devName": "javascript-plain"
+      },
+      {
+        "text": "jQuery",
+        "type": "devicon",
+        "devName": "jquery-plain"
+      },
+      {
+        "text": "d3.js",
+        "type": "devicon",
+        "devName": "d3js-plain"
+      }
+    ]
+  }
+]
