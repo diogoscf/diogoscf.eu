@@ -190,12 +190,36 @@ used instead of the query at the bottom*/
   display: block;
 }
 
+.info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-radius: 10px 0 0 0;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+.info a {
+  text-decoration: none;
+  color: black;
+}
+
 /*Note: once min() and max() can be used, the commented lines in the original block
 can be used instead of this query */
 @media screen and (max-width: 1010px) {
   .mypic img {
     height: 30vw;
     width: 30vw;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .info img {
+    display: none;
   }
 }
 
