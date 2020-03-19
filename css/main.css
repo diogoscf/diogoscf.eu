@@ -208,6 +208,10 @@ used instead of the query at the bottom*/
   color: black;
 }
 
+.four-o-four {
+  font-size: 5em !important;
+}
+
 /*Note: once min() and max() can be used, the commented lines in the original block
 can be used instead of this query */
 @media screen and (max-width: 1010px) {
