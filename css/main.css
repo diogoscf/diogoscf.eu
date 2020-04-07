@@ -27,6 +27,9 @@ html, body {
   font-size: 2em;
   text-transform: uppercase;
   position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .about-top {
@@ -43,13 +46,16 @@ html, body {
 .top h2 {
   margin: 0 0 0 0.2em;
   font-size: 0.7em;
-  margin-bottom: 2em;
+}
+
+.space-under {
+  margin-bottom: 1em !important;
 }
 
 .nav {
   font-family: "Open Sans", "Roboto", "Arial", sans-serif;
-  position: absolute;
-  bottom: 40px;
+  margin-top: auto;
+  margin-bottom: 30px;
 }
 
 .btn {
