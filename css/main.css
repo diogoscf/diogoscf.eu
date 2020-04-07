@@ -10,6 +10,7 @@ html, body {
   margin: 0;
   position: relative;
   overflow-x: hidden;
+  transition: .3s;
 }
 
 :root {
@@ -72,9 +73,8 @@ html, body {
 }
 
 .mypic {
-  position: relative;
-  float: right;
-  margin-right: 5vw;
+  position: absolute;
+  right: 5vw;
 }
 
 /*Note: once min() and max() can be used, the commented versions can be
@@ -93,6 +93,7 @@ used instead of the query at the bottom*/
   width: 100vw;
   text-align: center;
   font-size: 1.5em;
+  margin-bottom: 50px;
 }
 
 .stalk-text {
@@ -130,7 +131,7 @@ used instead of the query at the bottom*/
    display: flex;
    flex-wrap: wrap;
    margin: auto;
-   width: 50%;
+   width: 60vw;
 }
 
 .skills div {
@@ -191,6 +192,7 @@ used instead of the query at the bottom*/
 }
 
 .info {
+  display: none;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -214,16 +216,44 @@ used instead of the query at the bottom*/
 
 /*Note: once min() and max() can be used, the commented lines in the original block
 can be used instead of this query */
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1130px) {
+  .mypic {
+    top: calc(var(--main-height) - 30vw);
+  }
   .mypic img {
     height: 30vw;
     width: 30vw;
+    border-radius: 15vw;
+  }
+  .info img {
+    display: none;
+  }
+  .description {
+    width: 70vw;
+  }
+  .skills {
+    width: 70vw;
+  }
+  .achievements {
+    width: 70vw;
   }
 }
 
-@media screen and (max-width: 1010px) {
-  .info img {
-    display: none;
+@media screen and (max-width: 600px) {
+  html, body {
+    font-size: 0.9em;
+  }
+  .mypic img {
+    display:none;
+  }
+  .description {
+    width: 80vw;
+  }
+  .skills {
+    width: 90vw;
+  }
+  .achievements {
+    width: 90vw;
   }
 }
 
