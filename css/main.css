@@ -5,22 +5,27 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --theme: #ff7300; /*#ff9500 or #ff7300*/
+  --main-height: 50vh;
+  --text-colour: white; /*black or white*/
+  --bg-colour: black; /*white or black*/
+}
+
 html, body {
   font-family: "Open Sans", "Roboto", "Arial", sans-serif;
   margin: 0;
   position: relative;
   overflow-x: hidden;
   transition: .3s;
-}
-
-:root {
-  --theme: #ff9500;
-  --main-height: 50vh;
+  color: var(--text-colour);
+  background-color: var(--bg-colour)
 }
 
 .top {
   font-family: "Ubuntu", "Roboto", "Arial", sans-serif;
   background-color: var(--theme);
+  color: black;
   padding: 1vh 2vw;
   width: 96vw;
   min-height: var(--main-height);
@@ -118,7 +123,7 @@ used instead of the query at the bottom*/
 }
 
 .stalk-list i {
-  color: black;
+  color: var(--text-colour);
   transition: .3s;
 }
 
@@ -197,23 +202,57 @@ used instead of the query at the bottom*/
   display: block;
 }
 
-.info {
-  display: none;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 5px;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-radius: 10px 0 0 0;
-  text-align: center;
-  color: black;
-  background-color: white;
+.switch {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin: .5em;
+    width: 120px;
 }
 
-.info a {
-  text-decoration: none;
-  color: black;
+.switch img {
+    height: 2em;
+    -webkit-user-select: none; /* Safari, old Chrome and old Opera */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    -moz-user-select: none; /* Old Firefox */
+    user-select: none;
+}
+
+#theme-switch {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 37px;
+    right: 0;
+    width: 60px;
+    height: 34px;
+    background-color: #444;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+#theme-switch:checked + .slider {
+    background-color: #ccc;
+}
+
+#theme-switch:checked + .slider:before {
+    transform: translateX(26px);
 }
 
 .four-o-four {
